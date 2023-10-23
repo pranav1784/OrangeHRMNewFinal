@@ -1,0 +1,23 @@
+{
+  "name": "orangehrmnewfinal",
+  "version": "1.0.0",
+  "description": "Automate the Employee Dashboard with Cypress Automation tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinesh26133/OrangeHRMNewFinal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinesh26133/OrangeHRMNewFinal/issues"
+  },
+  "homepage": "https://github.com/dinesh26133/OrangeHRMNewFinal#readme",
+  "dependencies": {
+    "cypress": "^13.3.2"
+  }
+}
