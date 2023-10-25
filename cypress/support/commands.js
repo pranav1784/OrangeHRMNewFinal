@@ -31,5 +31,6 @@ Cypress.Commands.add("loginEnvironment", function () {
     cy.get('input[name="password"]').type("admin123")
     cy.get('button[type="submit"]').click()
   //})
-  
+
 })
+
