@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/dinesh26133/OrangeHRMNewFinal#readme",
   "devDependencies": {
-    "cypress": "^13.3.2"
+    "cypress": "^13.5.0"
   }
 }

@@ -1,8 +1,17 @@
 /// <reference types = "Cypress"/>
-
+let data
+before(()=>{
+    cy.fixture("example").then(function (Fdata) {
+        data = Fdata
+      })
+})
+beforeEach(()=>{
+   cy.loginEnvironment(data.username,data.password)
+     cy.visit("")
+     
+   })
 it('About Us', function()
 {
-    cy.loginEnvironment();
     cy.get('.oxd-topbar-header-userarea').click();
     cy.get('a.oxd-userdropdown-link:contains("About")').click();
    cy.wait(3000);
@@ -22,9 +31,8 @@ it('About Us', function()
 
 )
 
-it.only('Closing About Us', function()
+it('Closing About Us', function()
 {
-    cy.loginEnvironment();
     cy.get('.oxd-topbar-header-userarea').click();
     cy.get('a.oxd-userdropdown-link:contains("About")').click();
    cy.wait(3000);

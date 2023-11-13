@@ -1,9 +1,17 @@
 /// <reference types = "Cypress"/>
-
+let data
+before(()=>{
+    cy.fixture("example").then(function (Fdata) {
+        data = Fdata
+      })
+})
+beforeEach(()=>{
+    cy.loginEnvironment(data.username,data.password)
+      cy.visit("")
+      
+    })
 it('Support',function()
 {
-    cy.loginEnvironment();
-
     cy.get('.oxd-topbar-header-userarea').click();
     cy.wait(2000);
 

@@ -7,6 +7,7 @@ module.exports = defineConfig({
     },
 
     specPattern: 'cypress/integration/examples/*.js',
+    baseUrl:"https://opensource-demo.orangehrmlive.com/",
     "watchForFileChanges": false
   },
 });

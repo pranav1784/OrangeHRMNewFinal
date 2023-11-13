@@ -15,27 +15,18 @@ let items = [
 ]
 let count=0
 let auth=""
-before(() => {
-
-  
-  cy.loginEnvironment()
-    cy.getCookie("orangehrm").then((cookie)=>{
-       auth=cookie.value
-      // cy.log(auth)
-    
-    })
-
-  cy.wait(2000)
+let data
+before(()=>{
+    cy.fixture("example").then(function (Fdata) {
+        data = Fdata
+      })
 })
 beforeEach(()=>{
-  cy.session('orangehrm', () => {
-   cy.setCookie('orangehrm',auth)
- })
-  cy.visit("https://opensource-demo.orangehrmlive.com/", {
-        // onBeforeLoad: function () {
-        //   cy.setCookie("orangehrm",auth)
-        // }
-      })
+//   cy.session('orangehrm', () => {
+//    cy.setCookie('orangehrm',auth)
+//  })
+cy.loginEnvironment(data.username,data.password)
+  cy.visit("")
   
 })
 
